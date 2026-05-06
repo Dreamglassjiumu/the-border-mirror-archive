@@ -1,0 +1,5 @@
+import type { LexiconTerm } from '../data';
+import { SpoilerBadge } from './SpoilerBadge';
+export function LexiconTable({ terms, onSelect }: { terms: LexiconTerm[]; onSelect: (term: LexiconTerm)=>void }) {
+  return <div className="overflow-hidden rounded-3xl border border-white/10"><table className="w-full border-collapse bg-white/[0.04] text-left text-sm"><thead className="bg-white/[0.06] text-xs uppercase tracking-[0.25em] text-cyan-100/55"><tr><th className="p-4">Term</th><th className="hidden p-4 md:table-cell">Type</th><th className="p-4">Meaning</th><th className="hidden p-4 lg:table-cell">Layer</th></tr></thead><tbody>{terms.map((term) => <tr key={term.id} onClick={() => onSelect(term)} className="cursor-pointer border-t border-white/10 hover:bg-cyan-100/[0.05]"><td className="p-4 font-medium text-white">{term.chineseName}<br /><span className="text-xs text-stardust/80">{term.englishName}</span></td><td className="hidden p-4 text-slate-300 md:table-cell">{term.type}</td><td className="p-4 text-slate-300">{term.surfaceMeaning}</td><td className="hidden p-4 lg:table-cell"><SpoilerBadge level={term.spoilerLevel} /></td></tr>)}</tbody></table></div>;
+}
