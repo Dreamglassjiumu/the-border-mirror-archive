@@ -29,6 +29,20 @@ Preview the production build:
 npm run preview
 ```
 
+
+## GitHub Pages Deployment
+
+This repository is configured for automated GitHub Pages deployment through GitHub Actions.
+
+1. Push changes to the `main` branch to trigger the deployment workflow.
+2. In the GitHub repository, open **Settings → Pages**.
+3. Under **Build and deployment**, set **Source** to **GitHub Actions**.
+4. After the workflow finishes, visit:
+
+```text
+https://jiumu-dreamglass.github.io/the-border-mirror-archive/
+```
+
 ## Information Architecture
 
 The prototype includes ten primary archive views:
