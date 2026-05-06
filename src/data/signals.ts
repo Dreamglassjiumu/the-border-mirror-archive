@@ -1,0 +1,8 @@
+import type { Signal } from './types';
+
+export const signals: Signal[] = [
+  { id: 'signal-weather', title: '天气总是很好', signalName: '天气总是很好', type: 'Environmental', category: 'signal', spoilerLevel: 'Foreshadowing', tags: ['伏笔', '环境'], summary: '气候调节装置完美运行。', firstAppearance: '第一章', surfaceExplanation: '气候调节装置完美运行。', trueDirection: '模拟世界的环境服务化。', dangerLevel: 'Low', status: 'Dormant', isResolved: false, relatedSettings: ['天幕穹顶'], relatedCharacters: ['谢泼德'] },
+  { id: 'signal-core-label', title: '核心标签是职业而非姓名', signalName: '核心标签是职业而非姓名', type: 'Identity', category: 'signal', spoilerLevel: 'Foreshadowing', tags: ['伏笔', '核心'], summary: '便于融合者了解核心用途。', firstAppearance: '第一章', surfaceExplanation: '便于融合者了解核心用途。', trueDirection: '个体被功能化分类。', dangerLevel: 'Medium', status: 'Active', isResolved: false, relatedSettings: ['核心信息系统'], relatedCharacters: ['谢泼德'] },
+  { id: 'signal-library', title: '图书馆外形令人恐惧', signalName: '图书馆外形令人恐惧', type: 'Institution', category: 'signal', spoilerLevel: 'Hidden Truth', tags: ['作者隐藏', '图书馆'], summary: '特殊建筑美学。', firstAppearance: '第一章', surfaceExplanation: '特殊建筑美学。', trueDirection: '核心存储与高维观察系统可能有关。', dangerLevel: 'High', status: 'Hidden', isResolved: false, relatedSettings: ['图书馆'], relatedCharacters: ['谢泼德'] },
+  { id: 'signal-philosopher-core', title: '谢泼德随机获得哲人核心', signalName: '谢泼德随机获得哲人核心', type: 'Cognition', category: 'signal', spoilerLevel: 'Hidden Truth', tags: ['作者隐藏', '哲人核心'], summary: '申请制度公平随机。', firstAppearance: '第一章', surfaceExplanation: '申请制度公平随机。', trueDirection: '系统可能预判或安排了她的认知转变。', dangerLevel: 'High', status: 'Active', isResolved: false, relatedSettings: ['哲人核心'], relatedCharacters: ['谢泼德'] },
+];
