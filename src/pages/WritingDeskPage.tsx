@@ -62,6 +62,11 @@ export function WritingDeskPage() {
   const { isFocusMode, isLeftExpanded, isRightExpanded, leftWidth, rightWidth } = layoutPreferences;
   const showLeftPanel = isLeftExpanded && !isFocusMode;
   const showRightPanel = isRightExpanded && !isFocusMode;
+  const layoutStateClass = [
+    isFocusMode ? 'is-focus-mode' : '',
+    !showLeftPanel ? 'is-left-collapsed' : '',
+    !showRightPanel ? 'is-right-collapsed' : '',
+  ].filter(Boolean).join(' ');
 
   useEffect(() => {
     try {
@@ -112,14 +117,14 @@ export function WritingDeskPage() {
         onToggleRight={handleToggleRightPanel}
       />
 
-      <div className="writing-desk-layout flex flex-col gap-5 lg:flex-row lg:items-start">
+      <div className={`writing-desk-layout ${layoutStateClass} flex w-full max-w-none flex-col gap-5 lg:flex-row lg:items-start`}>
         {showLeftPanel && (
           <ResizablePanel className="order-2 lg:order-none" side="left" width={leftWidth} minWidth={260} maxWidth={460} onResize={(nextWidth) => updateLayoutPreferences({ leftWidth: nextWidth })}>
             <ArchiveLookupPanel />
           </ResizablePanel>
         )}
 
-        <main className={`writing-desk-editor-column order-1 min-w-0 flex-1 space-y-5 lg:order-none ${isFocusMode ? 'mx-auto w-full max-w-5xl' : ''}`}>
+        <main className="writing-desk-editor-column order-1 min-w-0 w-full max-w-none flex-1 space-y-5 lg:order-none">
           <DraftEditor chapters={chapters} currentChapter={currentChapter} onChapterChange={handleChapterChange} draft={draft} setDraft={setDraft} isFocusMode={isFocusMode} />
           {!isFocusMode && <DetectedTermsPanel terms={detectedTerms} />}
         </main>
