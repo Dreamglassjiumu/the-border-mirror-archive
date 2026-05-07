@@ -30,6 +30,16 @@ button, input, select, textarea { font: inherit; }
 ::-webkit-scrollbar { width: 10px; height: 10px; }
 ::-webkit-scrollbar-thumb { background: rgba(218,188,111,.22); border-radius: 999px; }
 
+.writing-desk-layout {
+  width: 100%;
+  max-width: none;
+}
+
+.writing-desk-editor-column {
+  width: 100%;
+  max-width: none;
+}
+
 .writing-desk-resizable-panel {
   width: 100%;
 }
@@ -47,6 +57,13 @@ button, input, select, textarea { font: inherit; }
   isolation: isolate;
 }
 
+.writing-desk-focus-mode .writing-desk-layout,
+.writing-desk-focus-mode .writing-desk-editor-column {
+  width: 100%;
+  max-width: none;
+  margin-inline: 0;
+}
+
 @media (min-width: 1024px) {
   .writing-desk-resizable-panel {
     flex: 0 0 var(--panel-width);
@@ -54,6 +71,24 @@ button, input, select, textarea { font: inherit; }
   }
 
   .writing-desk-editor-column {
-    flex-basis: 0;
+    flex: 1 1 0%;
+    width: auto;
+    max-width: none;
+  }
+
+  .writing-desk-layout.is-left-collapsed .writing-desk-editor-column,
+  .writing-desk-layout.is-right-collapsed .writing-desk-editor-column {
+    flex-grow: 1;
+  }
+
+  .writing-desk-layout.is-left-collapsed.is-right-collapsed,
+  .writing-desk-layout.is-focus-mode {
+    display: block;
+  }
+
+  .writing-desk-layout.is-left-collapsed.is-right-collapsed .writing-desk-editor-column,
+  .writing-desk-layout.is-focus-mode .writing-desk-editor-column {
+    width: 100%;
+    max-width: none;
   }
 }
