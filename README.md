@@ -76,18 +76,33 @@ https://jiumu-dreamglass.github.io/the-border-mirror-archive/
 
 ## Information Architecture
 
-The prototype includes ten primary archive views:
+The prototype includes eleven primary archive views:
 
 1. **Command Deck**: title, subtitle, logline, writing status, orbital map, pinned entries, and signal alerts.
-2. **Cosmology**: work positioning, twist layers, reader-visible layer, author-only layer, and world systems.
-3. **Ourotopia Federation**: civilization, places, institutions, infrastructure, transit, and dossier levels.
-4. **Biology & Core System**: body systems, core fusion, division, post-death handling, and ecological flora.
-5. **Characters**: character dossier records.
-6. **Plotlines**: narrative timeline records.
-7. **Chapters**: chapter status, synopsis, worldbuilding, conflict, foreshadowing, character change, and hooks.
-8. **Lexicon**: searchable and filterable term table.
-9. **Signals**: foreshadowing and anomaly records.
-10. **Pitches**: logline, pitch materials, synopsis placeholder, keywords, comps, and author notes.
+2. **Writing Desk**: three-column creation cockpit with archive lookup, local draft editing, chapter mission guidance, Markdown export, copy, clear, and detected lexicon terms.
+3. **Cosmology**: work positioning, twist layers, reader-visible layer, author-only layer, and world systems.
+4. **Ourotopia Federation**: civilization, places, institutions, infrastructure, transit, and dossier levels.
+5. **Biology & Core System**: body systems, core fusion, division, post-death handling, and ecological flora.
+6. **Characters**: character dossier records.
+7. **Plotlines**: narrative timeline records.
+8. **Chapters**: chapter status, synopsis, worldbuilding, conflict, foreshadowing, character change, and hooks.
+9. **Lexicon**: searchable and filterable term table.
+10. **Signals**: foreshadowing and anomaly records.
+11. **Pitches**: logline, pitch materials, synopsis placeholder, keywords, comps, and author notes.
+
+## Writing Desk / 写作台
+
+The **Writing Desk** upgrades the archive from a reference library into a lightweight creation cockpit. It does not require a backend, database, login, or rich-text editor.
+
+1. Enter it from the left navigation by selecting **Writing Desk / 写作台**.
+2. Use the chapter selector in the central **Draft Editor** to choose the active chapter; the first chapter is **第一章 · Another Great Day in Ourotopia**.
+3. Drafts auto-save to browser `localStorage` while you type, using the key format `border-mirror-draft-[chapterId]`.
+4. `localStorage` drafts are only stored in the current browser on the current device; they do not automatically sync to other devices or collaborators.
+5. Click **Copy Draft** to copy the full current draft to the clipboard. If the Clipboard API is unavailable, the page attempts a safe textarea fallback.
+6. Click **Export .md** to download a Markdown file named `[chapterId]-draft.md` with the chapter title and draft body.
+7. Click **Clear Draft** to remove the current chapter draft from the editor and local storage; the page asks for confirmation before deleting.
+8. Use the left **Archive Lookup / 资料检索区** to search worldbuilding, federation records, biology/core mechanisms, characters, plotlines, chapters, lexicon terms, foreshadowing signals, and pitches while writing. Search results open inline so you can review details and relationships without leaving the desk.
+9. Use **Detected Terms / 已检测术语** below the editor to check which lexicon terms appear in the current draft. Terms are detected by simple Chinese/English name matching and can be expanded for their surface meaning and details.
 
 ## Data Files
 

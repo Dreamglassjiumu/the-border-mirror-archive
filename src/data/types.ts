@@ -92,6 +92,7 @@ export interface Chapter extends ArchiveEntry {
   sheppardChange: string;
   endingHook: string;
   draftPlaceholder: string;
+  doNotRevealYet: string[];
 }
 
 export interface LexiconTerm extends ArchiveEntry {
