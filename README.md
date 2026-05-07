@@ -98,11 +98,16 @@ The **Writing Desk** upgrades the archive from a reference library into a lightw
 2. Use the chapter selector in the central **Draft Editor** to choose the active chapter; the first chapter is **第一章 · Another Great Day in Ourotopia**.
 3. Drafts auto-save to browser `localStorage` while you type, using the key format `border-mirror-draft-[chapterId]`.
 4. `localStorage` drafts are only stored in the current browser on the current device; they do not automatically sync to other devices or collaborators.
-5. Click **Copy Draft** to copy the full current draft to the clipboard. If the Clipboard API is unavailable, the page attempts a safe textarea fallback.
-6. Click **Export .md** to download a Markdown file named `[chapterId]-draft.md` with the chapter title and draft body.
-7. Click **Clear Draft** to remove the current chapter draft from the editor and local storage; the page asks for confirmation before deleting.
-8. Use the left **Archive Lookup / 资料检索区** to search worldbuilding, federation records, biology/core mechanisms, characters, plotlines, chapters, lexicon terms, foreshadowing signals, and pitches while writing. Search results open inline so you can review details and relationships without leaving the desk.
-9. Use **Detected Terms / 已检测术语** below the editor to check which lexicon terms appear in the current draft. Terms are detected by simple Chinese/English name matching and can be expanded for their surface meaning and details.
+5. Chapter records can include `chapter.manuscript` to store an archived chapter body that is part of the local TypeScript data set.
+6. The Writing Desk never automatically overwrites a browser draft with `chapter.manuscript`; the editor continues to prefer the current `localStorage` draft by default.
+7. To continue writing from an archived body, click **Load Archive / 载入归档正文** in the **Manuscript Archive / 章节正文档案** panel. If a local draft already exists, the page asks for confirmation before replacing it.
+8. `localStorage` drafts are only stored in the current browser on the current device; they do not automatically sync to other devices or collaborators.
+9. Click **Copy Archive / 复制归档正文** to copy the archived manuscript text without loading it into the editor. If the Clipboard API is unavailable, the page attempts a safe textarea fallback.
+10. Click **Copy Draft** to copy the full current draft to the clipboard. If the Clipboard API is unavailable, the page attempts a safe textarea fallback.
+11. Click **Export .md** to download a Markdown file named `[chapterId]-draft.md` with the chapter title and draft body.
+12. Click **Clear Draft** to remove the current chapter draft from the editor and local storage; the page asks for confirmation before deleting.
+13. Use the left **Archive Lookup / 资料检索区** to search worldbuilding, federation records, biology/core mechanisms, characters, plotlines, chapters, lexicon terms, foreshadowing signals, and pitches while writing. Search results open inline so you can review details and relationships without leaving the desk.
+14. Use **Detected Terms / 已检测术语** below the editor to check which lexicon terms appear in the current draft. Terms are detected by simple Chinese/English name matching and can be expanded for their surface meaning and details.
 
 ## Data Files
 

@@ -92,6 +92,7 @@ export interface Chapter extends ArchiveEntry {
   sheppardChange: string;
   endingHook: string;
   draftPlaceholder: string;
+  manuscript?: string;
   doNotRevealYet: string[];
 }
 
