@@ -1,4 +1,4 @@
-export type SpoilerLevel = 'Public' | 'Foreshadowing' | 'Hidden Truth';
+export type SpoilerLevel = 'public' | 'foreshadowing' | 'hidden';
 export type ArchiveCategory = 'world' | 'federation' | 'biology' | 'character' | 'plotline' | 'chapter' | 'lexicon' | 'signal' | 'pitch';
 
 export interface ArchiveEntry {
@@ -9,6 +9,10 @@ export interface ArchiveEntry {
   spoilerLevel: SpoilerLevel;
   tags: string[];
   summary: string;
+  details: string;
+  relatedCharacters: string[];
+  relatedChapters: string[];
+  relatedTerms: string[];
   content?: string;
   related?: string[];
 }
@@ -42,8 +46,6 @@ export interface BiologyEntry extends ArchiveEntry {
   socialMeaning: string;
   humanFeeling: string;
   conflicts: string[];
-  relatedCharacters: string[];
-  relatedChapters: string[];
   touchesFinalTwist: boolean;
 }
 
@@ -62,7 +64,6 @@ export interface Character extends ArchiveEntry {
   knows: string[];
   doesNotKnow: string[];
   thematicQuestion: string;
-  relatedChapters: string[];
   relatedSettings: string[];
   keyLines: string[];
   cognitiveStability: number;
@@ -75,8 +76,6 @@ export interface Plotline extends ArchiveEntry {
   start: string;
   midpoint: string;
   end: string;
-  relatedChapters: string[];
-  relatedCharacters: string[];
   relatedSettings: string[];
   unresolvedQuestions: string[];
   foreshadowing: string[];
@@ -117,7 +116,6 @@ export interface Signal extends ArchiveEntry {
   isResolved: boolean;
   resolvedChapter?: string;
   relatedSettings: string[];
-  relatedCharacters: string[];
 }
 
 export interface Pitch extends ArchiveEntry {

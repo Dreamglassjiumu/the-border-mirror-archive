@@ -1,15 +1,35 @@
 import type { BiologyEntry } from './types';
 
-export const biologyEntries: BiologyEntry[] = [
-  { id: 'citizen-body', title: '公民身体结构', type: 'Body', category: 'biology', spoilerLevel: 'Public', tags: ['生物学', '身体'], summary: '啫喱状结构、柔性器官与可外挂感官模块构成公民基础身体。', surfaceExplanation: '身体能按生活需要改变局部密度与形态。', socialMeaning: '身体不是边界，而是可持续更新的接口。', humanFeeling: '柔软、陌生，介于生命与器官系统之间。', conflicts: ['身体边界模糊时，自我边界还存在吗？'], relatedCharacters: ['谢泼德'], relatedChapters: ['第一章'], touchesFinalTwist: false },
-  { id: 'mouthpart', title: '口器', type: 'Organ', category: 'biology', spoilerLevel: 'Public', tags: ['生物学', '吞噬'], summary: '吞噬模块、营养与核心时使用的温和器官。', surfaceExplanation: '用于安全拆解并吸收外部信息。', socialMeaning: '吃、学习、悼念与继承在此合一。', humanFeeling: '亲密又惊悚。', conflicts: ['吞噬是否等于占有？'], relatedCharacters: ['谢泼德'], relatedChapters: ['第一章'], touchesFinalTwist: false },
-  { id: 'tentacles', title: '触手', type: 'Organ', category: 'biology', spoilerLevel: 'Public', tags: ['生物学', '身体'], summary: '用于绘画、移动、交融与操作有机技术的多用途肢体。', surfaceExplanation: '触手末端可分化为细密感知纤维。', socialMeaning: '接触是语言之前的礼仪。', humanFeeling: '美感与不适并存。', conflicts: ['过度接触是否会压缩私人空间？'], relatedCharacters: ['谢泼德'], relatedChapters: ['第一章'], touchesFinalTwist: false },
-  { id: 'gel-skin', title: '胶质皮肤', type: 'Tissue', category: 'biology', spoilerLevel: 'Public', tags: ['生物学', '身体'], summary: '可透光、可调色、可修复的胶质外层。', surfaceExplanation: '承担保护、情绪显色与环境交换。', socialMeaning: '情绪透明让误解变少。', humanFeeling: '缺少人类式隐私。', conflicts: ['若痛苦被皮肤自动抚平，痛苦还会形成记忆吗？'], relatedCharacters: ['谢泼德'], relatedChapters: ['第一章'], touchesFinalTwist: false },
-  { id: 'visual-module', title: '视觉模块', type: 'Module', category: 'biology', spoilerLevel: 'Foreshadowing', tags: ['模块', '感官'], summary: '可被吞噬并装载的视觉外挂。', surfaceExplanation: '公民可按职业和场景更换感官。', socialMeaning: '感知是公共技术，而非天生限制。', humanFeeling: '像把眼睛当工具食用。', conflicts: ['没有模块时的世界是否更真实？'], relatedCharacters: ['谢泼德'], relatedChapters: ['第一章'], touchesFinalTwist: true },
-  { id: 'phagocytosis', title: '吞噬机制', type: 'Mechanism', category: 'biology', spoilerLevel: 'Public', tags: ['吞噬', '融合'], summary: '公民通过吞噬融合外部信息、模块、经验与逝者核心。', surfaceExplanation: '吸收对象被温和拆解为可整合的信息与物质。', socialMeaning: '继承、悼念、共享、延续。', humanFeeling: '惊悚，近似食用同类遗物。', conflicts: ['如果有人拒绝融合核心，社会会如何反应？'], relatedCharacters: ['谢泼德'], relatedChapters: ['第一章'], touchesFinalTwist: true },
-  { id: 'core-fusion', title: '核心融合', type: 'Core', category: 'biology', spoilerLevel: 'Foreshadowing', tags: ['核心', '融合'], summary: '融合核心以获得经验、技能与新的认知倾向。', surfaceExplanation: '核心在个体内部与原核心协调。', socialMeaning: '死亡并非终止，而是进入公共生命。', humanFeeling: '哀悼与摄食混在一起。', conflicts: ['新的思想是成长，还是入侵？'], relatedCharacters: ['谢泼德'], relatedChapters: ['第一章'], touchesFinalTwist: true },
-  { id: 'division', title: '分裂繁衍', type: 'Reproduction', category: 'biology', spoilerLevel: 'Public', tags: ['繁衍', '分裂'], summary: '信息与能量积累到阈值后分裂出新的子体。', surfaceExplanation: '子体继承部分核心倾向，同时拥有独立成长路径。', socialMeaning: '繁衍是自我的延伸与释放。', humanFeeling: '父母、后代与自我边界不清。', conflicts: ['子体是否背负前体的设计目的？'], relatedCharacters: ['谢泼德'], relatedChapters: ['后续章节'], touchesFinalTwist: false },
-  { id: 'vocation-gene', title: '职业基因', type: 'Core Program', category: 'biology', spoilerLevel: 'Hidden Truth', tags: ['天职', '作者隐藏'], summary: '公民诞生时核心已带有职业倾向。', surfaceExplanation: '公民诞生时核心已带有职业倾向。', socialMeaning: '避免选择焦虑，保证社会协作。', humanFeeling: '命运被预设。', conflicts: ['如果谢泼德想成为飞行员，但她生来是画家，这算不算不自由？'], relatedCharacters: ['谢泼德'], relatedChapters: ['第一章'], touchesFinalTwist: true },
-  { id: 'post-death-core', title: '死亡后的核心处理', type: 'Ritual', category: 'biology', spoilerLevel: 'Foreshadowing', tags: ['死亡', '核心'], summary: '离世后的核心会被配送、保存或捐献。', surfaceExplanation: '核心进入图书馆或配送系统，供其他公民融合。', socialMeaning: '个体经验回到共同体。', humanFeeling: '庄严，也像社会化回收。', conflicts: ['是否允许不被保存、不被融合？'], relatedCharacters: ['谢泼德'], relatedChapters: ['第一章'], touchesFinalTwist: true },
-  { id: 'ecological-flora', title: '生态菌群', type: 'Ecosystem', category: 'biology', spoilerLevel: 'Public', tags: ['生态', '有机技术'], summary: '协助分解、清洁、情绪稳定与模块兼容的微生态。', surfaceExplanation: '菌群是城市与身体之间的翻译层。', socialMeaning: '环境与个体不是分开的。', humanFeeling: '舒适背后有被管理的感觉。', conflicts: ['菌群是否也参与欲望调节？'], relatedCharacters: ['谢泼德'], relatedChapters: ['第一章'], touchesFinalTwist: true },
-];
+const biologyRows = [
+  ['bio-citizen-body', '公民身体结构', 'Body', '胶质结构、柔性器官与可外挂感官模块构成公民基础身体。', '身体能按生活需要改变局部密度与形态。', '身体不是边界，而是可持续更新的接口。', '柔软、陌生，介于生命与器官系统之间。', 'public', false, ['term-module']],
+  ['bio-mouthpart', '口器', 'Organ', '吞噬模块、营养与核心时使用的温和器官。', '用于安全拆解并吸收外部信息。', '吃、学习、悼念与继承在此合一。', '亲密又惊悚。', 'public', false, ['term-phagocytosis']],
+  ['bio-tentacles', '触手', 'Organ', '用于绘画、移动、交融与操作有机技术的多用途肢体。', '触手末端可分化为细密感知纤维。', '接触是语言之前的礼仪。', '美感与不适并存。', 'public', false, ['term-communion']],
+  ['bio-gel-skin', '胶质皮肤', 'Tissue', '可透光、可调色、可修复的胶质外层。', '承担保护、情绪显色与环境交换。', '情绪透明让误解变少。', '缺少人类式隐私。', 'public', false, ['term-organic-tech']],
+  ['bio-visual-module', '视觉模块', 'Module', '可被吞噬并装载的视觉外挂。', '公民可按职业和场景更换感官。', '感知是公共技术，而非天生限制。', '像把眼睛当工具食用。', 'foreshadowing', true, ['term-module', 'term-phagocytosis']],
+  ['bio-phagocytosis', '吞噬机制', 'Mechanism', '公民通过吞噬融合外部信息、模块、经验与逝者核心。', '吸收对象被温和拆解为可整合的信息与物质。', '继承、悼念、共享、延续。', '惊悚，近似食用同类遗物。', 'public', true, ['term-phagocytosis', 'term-core-fusion']],
+  ['bio-core-fusion', '核心融合', 'Core', '融合核心以获得经验、技能与新的认知倾向。', '核心在个体内部与原核心协调。', '死亡并非终止，而是进入公共生命。', '哀悼与摄食混在一起。', 'foreshadowing', true, ['term-core-fusion', 'term-public-memory']],
+  ['bio-division', '分裂繁衍', 'Reproduction', '信息与能量积累到阈值后分裂出新的子体。', '子体继承部分核心倾向，同时拥有独立成长路径。', '繁衍是自我的延伸与释放。', '父母、后代与自我边界不清。', 'public', false, ['term-division']],
+  ['bio-vocation-gene', '职业基因', 'Core Program', '公民诞生时核心已带有职业倾向。', '天职倾向被解释为个体自然热爱。', '避免选择焦虑，保证社会协作。', '命运被预设。', 'hidden', true, ['term-vocation-gene']],
+  ['bio-post-death-core', '死亡后的核心处理', 'Ritual', '离世后的核心会被配送、保存或捐献。', '核心进入图书馆或配送系统，供其他公民融合。', '个体经验回到共同体。', '庄严，也像社会化回收。', 'foreshadowing', true, ['term-core', 'term-library', 'term-public-memory']],
+  ['bio-ecological-flora', '生态菌群', 'Ecosystem', '协助分解、清洁、情绪稳定与模块兼容的微生态。', '菌群是城市与身体之间的翻译层。', '环境与个体不是分开的。', '舒适背后有被管理的感觉。', 'public', true, ['term-organic-tech']],
+] as const;
+
+export const biologyEntries: BiologyEntry[] = biologyRows.map(([id, title, type, summary, surface, social, feeling, spoilerLevel, touchesFinalTwist, terms]) => ({
+  id,
+  title,
+  type,
+  category: 'biology',
+  spoilerLevel,
+  tags: ['生物学', type],
+  summary,
+  details: `${summary} 维护重点：表层是乌洛托比亚生命日常，隐藏层用于追踪自我边界、欲望设计和模拟实验线索。`,
+  surfaceExplanation: surface,
+  socialMeaning: social,
+  humanFeeling: feeling,
+  conflicts: ['自我边界是否仍然存在？', '拒绝融合是否被允许？'],
+  touchesFinalTwist,
+  relatedCharacters: ['谢泼德'],
+  relatedChapters: ['chapter-01'],
+  relatedTerms: [...terms],
+  related: ['谢泼德', '第一章'],
+}));

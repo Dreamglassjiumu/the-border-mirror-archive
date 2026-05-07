@@ -1,5 +1,27 @@
 import type { Chapter } from './types';
 
 export const chapters: Chapter[] = [
-  { id: 'chapter-01', title: 'Another Great Day in Ourotopia', subtitle: '第一章', category: 'chapter', spoilerLevel: 'Foreshadowing', tags: ['章节', '第一部', '进行中'], summary: '谢泼德在完美早晨醒来，收到哲人核心，前往公民广场参加生日庆典。', part: 'What a wonderful world', status: '生日庆典前夕 / 哲人核心待融合', synopsis: '谢泼德在完美早晨醒来，收到哲人核心，穿上礼服，乘坐思维草叶轨道车前往公民广场参加生日庆典。', worldbuilding: ['气候调节', '居住舱', '视觉模块', '食材箱', '核心配送', '图书馆', '思维草叶交通', '公民广场'], conflict: '谢泼德想获得实用技能，却随机获得哲人核心。', foreshadowing: ['天气总是很好', '核心标签是职业而不是姓名', '图书馆外形令人恐惧', '交通系统过于精准'], sheppardChange: '谢泼德即将从艺术家的感知世界进入哲人的思辨世界。', endingHook: '生日庆典上出现第一个无法被完美社会轻易解释的小异常。', draftPlaceholder: '正文草稿占位：完美早晨的光像被递到眼前的温水。', related: ['谢泼德', '哲人核心'] },
+  {
+    id: 'chapter-01',
+    title: 'Another Great Day in Ourotopia',
+    subtitle: '第一章',
+    category: 'chapter',
+    spoilerLevel: 'foreshadowing',
+    tags: ['章节', '第一部', 'What a wonderful world', '进行中'],
+    summary: '谢泼德在完美早晨醒来，收到哲人核心，前往公民广场参加生日庆典。',
+    details: '第一章的任务是让乌洛托比亚先显得值得被爱：居住舱温柔、天气完美、城市像身体一样照料公民。裂缝必须很小，只表现为“过度精准”：哲人核心的随机、图书馆的外形、思维草叶提前抵达，以及谢泼德第一次觉得一个问题没有用途。',
+    part: 'What a wonderful world',
+    status: '生日庆典前夕 / 哲人核心待融合',
+    synopsis: '谢泼德在完美早晨醒来，居住舱为她递出礼服、食材箱与核心配送通知。她原本期待更实用的绘画或飞行相关核心，却收到一枚“哲人核心”。她穿过被天幕穹顶照亮的首都，乘坐思维草叶轨道车前往公民广场参加生日庆典。沿途她第一次注意到图书馆像一只沉睡的眼睛。',
+    worldbuilding: ['气候调节', '居住舱', '视觉模块', '食材箱', '核心配送', '图书馆', '思维草叶交通', '公民广场'],
+    conflict: '谢泼德想获得可直接贡献创作的实用核心，却随机获得会制造无用问题的哲人核心。',
+    foreshadowing: ['天气总是很好', '核心标签是职业而不是姓名', '图书馆外形令人恐惧', '交通系统过于精准', '生日祝福语重复得像模板'],
+    sheppardChange: '谢泼德即将从艺术家的感知世界进入哲人的思辨世界。',
+    endingHook: '生日庆典上出现第一个无法被完美社会轻易解释的小异常。',
+    draftPlaceholder: '正文草稿方向：完美早晨的光像被递到眼前的温水。谢泼德真心觉得今天很好，直到“哲人”这个标签让她短暂地不知道该感谢谁。',
+    relatedCharacters: ['谢泼德'],
+    relatedChapters: [],
+    relatedTerms: ['term-philosopher-core', 'term-sky-dome', 'term-thought-leaf', 'term-library', 'term-civic-plaza'],
+    related: ['谢泼德', '哲人核心', '公民广场'],
+  },
 ];
