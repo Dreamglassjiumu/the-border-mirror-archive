@@ -29,3 +29,31 @@ button, input, select, textarea { font: inherit; }
 .meter, meter { accent-color: #dabc6f; }
 ::-webkit-scrollbar { width: 10px; height: 10px; }
 ::-webkit-scrollbar-thumb { background: rgba(218,188,111,.22); border-radius: 999px; }
+
+.writing-desk-resizable-panel {
+  width: 100%;
+}
+
+.writing-desk-resize-handle {
+  touch-action: none;
+}
+
+.writing-desk-resize-handle.is-dragging,
+.writing-desk-resize-handle:hover {
+  box-shadow: 0 0 24px rgba(125, 211, 252, .16);
+}
+
+.writing-desk-focus-mode {
+  isolation: isolate;
+}
+
+@media (min-width: 1024px) {
+  .writing-desk-resizable-panel {
+    flex: 0 0 var(--panel-width);
+    width: var(--panel-width);
+  }
+
+  .writing-desk-editor-column {
+    flex-basis: 0;
+  }
+}

@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import type { Chapter } from '../../data';
 import { chapterDisplayTitle, countDraft, draftKey } from './writingUtils';
 
-export function DraftEditor({ chapters, currentChapter, onChapterChange, draft, setDraft }: { chapters: Chapter[]; currentChapter: Chapter; onChapterChange: (chapterId: string) => void; draft: string; setDraft: (draft: string) => void }) {
+export function DraftEditor({ chapters, currentChapter, onChapterChange, draft, setDraft, isFocusMode = false }: { chapters: Chapter[]; currentChapter: Chapter; onChapterChange: (chapterId: string) => void; draft: string; setDraft: (draft: string) => void; isFocusMode?: boolean }) {
   const [lastSavedAt, setLastSavedAt] = useState<Date | undefined>();
   const [copyState, setCopyState] = useState('Copy Draft');
   const stats = useMemo(() => countDraft(draft), [draft]);
@@ -98,7 +98,7 @@ export function DraftEditor({ chapters, currentChapter, onChapterChange, draft, 
         value={draft}
         onChange={(event) => setDraft(event.target.value)}
         placeholder="在这里继续记录谢泼德穿过完美世界时听见的第一道裂缝……"
-        className="mt-5 min-h-[52vh] w-full resize-y rounded-[1.75rem] border border-white/10 bg-[#070a16]/90 p-5 text-base leading-8 text-slate-100 outline-none transition placeholder:text-slate-600 focus:border-stardust/60 focus:bg-[#090d1d] focus:shadow-[0_0_0_4px_rgba(218,188,111,.08),0_0_40px_rgba(125,211,252,.08)]"
+        className={`mt-5 w-full resize-y rounded-[1.75rem] border border-white/10 bg-[#070a16]/90 p-5 text-base leading-8 text-slate-100 outline-none transition placeholder:text-slate-600 focus:border-stardust/60 focus:bg-[#090d1d] focus:shadow-[0_0_0_4px_rgba(218,188,111,.08),0_0_40px_rgba(125,211,252,.08)] ${isFocusMode ? 'min-h-[70vh]' : 'min-h-[64vh]'}`}
       />
 
       <div className="mt-4 grid gap-3 md:grid-cols-3">
